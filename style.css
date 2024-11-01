@@ -76,7 +76,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #ecececb9;
+    color: #0099cc;
 }
 
 main {
@@ -132,14 +132,19 @@ section {
     background-color: var(--cor-secundaria);
     text-decoration: none;
     color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 40px;
+    padding: 0.75rem 0.75rem;
+    border-radius: 50px;
     transition: var(--transicao);
     font-size: 20px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: auto;
+    margin: 0.75rem;
+    max-width: 200px;
 }
 
 .botao-de-contato:hover {
-    background-color: #004080;
+    background-color: #0099cc;
     transform: scale(1.05);
 }
 
@@ -235,17 +240,28 @@ section {
 .contato {
     background-color: var(--cor-de-fundo);
     color: var(--cor-primaria);
-    padding: 2rem 1rem;
+    padding: 0;
 }
 
-.contato-form {
-    max-width: 600px;
-    margin: 0 auto;
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
 }
 
-.grupo-formulario {
-    margin-bottom: 1.5rem;
+.social-icon {
+    font-size: 2.5rem;
+    color: var(--cor-secundaria);
+    transition: color 0.3s;
 }
+
+.social-icon:hover {
+    color: #0099cc;
+    transform: scale(1.2);
+}
+
 
 label {
     margin-bottom: 0.5rem;
@@ -279,15 +295,8 @@ button {
 footer {
     background-color: var(--cor-secundaria);
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 1.5rem;
     color: white;
-}
-
-.icones-footer {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-bottom: 1rem;
 }
 
 @keyframes fade {
@@ -336,7 +345,12 @@ html {
         background-color: white; 
         color: var(--cor-secundaria); 
         border-radius: 5px; 
-        padding: 0.3rem; 
+        padding: 0.3rem;
+        color: var(--cor-secundaria);
+    }
+
+    .nav-toggle:hover {
+        background-color: #0099cc;
     }
 
     .dev {
@@ -386,7 +400,7 @@ html {
 
 .scroll-to-top {
     position: fixed;
-    bottom: 20px;
+    bottom: 93px;
     right: 20px;
     background-color: var(--cor-secundaria);
     color: white;
@@ -404,5 +418,5 @@ html {
 }
 
 .scroll-to-top:hover {
-    background-color: #004080; 
+    background-color: #0099cc; 
 }
