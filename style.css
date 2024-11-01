@@ -324,10 +324,35 @@ html {
 
 @media (max-width: 768px) {
     .dev {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-columns: 1fr; 
     }
+    .nav-links {
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 70px; 
+        left: 0;
+        right: 0;
+        background-color: var(--cor-secundaria);
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .nav-toggle {
+        display: flex; 
+    }
+
     .texto-home {
-        font-size: 30px; /* Ajustar tamanho da fonte para dispositivos móveis */
+        font-size: 30px; 
+    }
+
+    .botao-de-contato {
+        display: block; 
+        width: 100%; 
+        margin: 1rem 0; 
     }
 }
 
@@ -344,7 +369,7 @@ html {
     width: 50px;
     height: 50px;
     font-size: 24px;
-    display: none; /* Começa escondido */
+    display: none; 
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -353,5 +378,5 @@ html {
 }
 
 .scroll-to-top:hover {
-    background-color: #004080; /* Cor ao passar o mouse */
+    background-color: #004080; 
 }
