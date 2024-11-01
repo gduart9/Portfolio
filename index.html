@@ -139,7 +139,6 @@
 <script>
     const scrollToTopButton = document.getElementById('scroll-to-top');
 
-    // Mostrar ou esconder o botão baseado na rolagem
     window.addEventListener('scroll', () => {
         if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             scrollToTopButton.style.display = 'flex';
@@ -148,11 +147,10 @@
         }
     });
 
-    // Ação do botão ao clicar
     scrollToTopButton.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' // Rolagem suave
+            behavior: 'smooth'
         });
     });
 </script>
@@ -162,7 +160,7 @@
     const navLinks = document.querySelector('.nav-links');
 
     navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active'); // Alterna a classe 'active'
+        navLinks.classList.toggle('active');
     });
 </script>
 

@@ -72,7 +72,7 @@ nav {
     text-decoration: none;
     transition: var(--transicao);
     font-size: 1.2rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
 }
 
 .nav-links a:hover {
@@ -235,6 +235,7 @@ section {
 .contato {
     background-color: var(--cor-de-fundo);
     color: var(--cor-primaria);
+    padding: 2rem 1rem;
 }
 
 .contato-form {
@@ -278,7 +279,7 @@ button {
 footer {
     background-color: var(--cor-secundaria);
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     color: white;
 }
 
@@ -322,10 +323,26 @@ html {
     scroll-margin-top: 50px;
 }
 
+.nav-toggle {
+    display: none; 
+}
+
 @media (max-width: 768px) {
+    .nav-toggle {
+        display: flex; 
+        cursor: pointer; 
+        align-items: center;
+        justify-content: center; 
+        background-color: white; 
+        color: var(--cor-secundaria); 
+        border-radius: 5px; 
+        padding: 0.3rem; 
+    }
+
     .dev {
         grid-template-columns: 1fr; 
     }
+
     .nav-links {
         display: none; 
         flex-direction: column; 
@@ -334,14 +351,23 @@ html {
         left: 0;
         right: 0;
         background-color: var(--cor-secundaria);
-        padding: 1rem 0;
+        padding: 1rem 0;    
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 0.5rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+        transition: background-color 0.3s;
+    }
+
+    .nav-links a:last-child {
+        margin-bottom: 0;
     }
 
     .nav-links.active {
-        display: flex; 
-    }
-
-    .nav-toggle {
         display: flex; 
     }
 
