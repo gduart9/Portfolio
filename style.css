@@ -1,0 +1,357 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-de-fundo: #f0f4f8;
+    --cor-de-texto: #1a202c;
+    --cor-primaria: #000000;
+    --cor-secundaria: #003366;
+    --cor-de-fundo-card: #f8f8f8;
+    --cor-auxiliar: #003366;
+    --fonte: 'Inter', Arial, sans-serif;
+    --transicao: all 0.3s ease;
+}
+
+body {
+    font-family: var(--fonte);
+    margin: 0;
+    background-color: var(--cor-de-fundo);
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--cor-secundaria);
+}
+
+header {
+    background-color: var(--cor-secundaria);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: var(--transicao);
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+    color: #ecececb9;
+}
+
+main {
+    margin-top: 10rem;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+.texto-home {
+    display: inline-block;
+    font-size: 40px;
+    margin-bottom: 40rem;
+    margin-top: 10rem;
+}
+
+.texto-home h4 {
+    color: var(--cor-secundaria);
+}
+
+.texto-home h1 {
+    color: #0099cc;
+}
+
+.texto-home h3 {
+    margin-bottom: 10px;
+    color: var(--cor-secundaria);
+}
+
+.dev {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+    align-items: center;
+    background-color: var(--cor-de-fundo);
+}
+
+.dev-texto h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--cor-secundaria);
+}
+
+.dev-texto p {
+    font-size: 1.23rem;
+    margin-bottom: 2rem;
+    color: black;
+    font-style: italic;
+}
+
+.botao-de-contato {
+    background-color: var(--cor-secundaria);
+    text-decoration: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 40px;
+    transition: var(--transicao);
+    font-size: 20px;
+}
+
+.botao-de-contato:hover {
+    background-color: #004080;
+    transform: scale(1.05);
+}
+
+.dev-imagem {
+    position: relative;
+}
+
+.imagem-perfil {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    object-fit: cover;
+}
+
+/*skills--------------------------------------------------*/
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.skills-item {
+    background-color: var(--cor-de-fundo-card);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    transition: var(--transicao);
+}
+
+.skills-item:hover {
+    transform: translateY(-10px);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/*projetos--------------------------------------------------*/
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.projeto-card {
+    background-color: var(--cor-de-fundo-card);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    transition: var(--transicao);
+    text-align: center;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+}
+
+.titulo-projeto {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--cor-primaria);
+}
+
+.projeto-tags {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projeto-tags span {
+    background-color: var(--cor-auxiliar);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#projetos, #skills {
+    margin: 200px 0;
+}
+
+/*contato---------------------------------------------------*/
+
+.contato {
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-primaria);
+}
+
+.contato-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grupo-formulario {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input, textarea {
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
+    padding: 0.75rem;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.titulo-contato {
+    color: var(--cor-secundaria);
+}
+
+/*footer------------------------------------------------*/
+
+footer {
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    padding: 2rem 0;
+    color: white;
+}
+
+.icones-footer {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+@keyframes fade {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.fade-in {
+    animation: fade 1s ease-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home {
+    scroll-margin-top: 900px;
+}
+
+#sobre {
+    scroll-margin-top: 140px; 
+}
+
+#skills {
+    scroll-margin-top: 200px;
+}
+
+#projetos {
+    scroll-margin-top: 200px;
+}
+
+#contato {
+    scroll-margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .dev {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+    .texto-home {
+        font-size: 30px; /* Ajustar tamanho da fonte para dispositivos móveis */
+    }
+}
+
+/*botao pra cima ---------------------------------------------------*/
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--cor-secundaria);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: none; /* Começa escondido */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #004080; /* Cor ao passar o mouse */
+}
